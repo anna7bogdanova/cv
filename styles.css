@@ -120,7 +120,7 @@ p {
 .lede {
   font-size: 1.06rem;
   color: #232429;
-  max-width: 70ch;
+  max-width: 78ch;
 }
 
 .note {
@@ -235,12 +235,9 @@ p {
   border-radius: 12px;
 }
 
-/* --- Hero layout --- */
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.4fr 0.9fr;
-  gap: 26px;
-  align-items: start;
+/* --- Hero layout (single column) --- */
+.hero-copy {
+  max-width: 900px;
 }
 
 .hero-cta {
@@ -248,31 +245,6 @@ p {
   gap: 12px;
   flex-wrap: wrap;
   margin: 18px 0 22px;
-}
-
-.hero-card .card {
-  border: 1px solid var(--border);
-  background: linear-gradient(180deg, var(--surface-2), var(--surface));
-  border-radius: var(--radius);
-  padding: 18px;
-  box-shadow: var(--shadow);
-}
-
-.card-title {
-  margin: 0 0 12px;
-  font-size: 1.05rem;
-}
-
-.checklist {
-  margin: 0;
-  padding-left: 18px;
-  color: #232429;
-}
-
-.divider {
-  height: 1px;
-  background: var(--border);
-  margin: 16px 0;
 }
 
 /* --- Stats --- */
@@ -321,7 +293,7 @@ p {
   color: #2b2c31;
 }
 
-/* --- Work --- */
+/* --- Work / Experience --- */
 .work-list {
   display: grid;
   gap: 14px;
@@ -392,13 +364,7 @@ p {
   max-width: 78ch;
 }
 
-.about-meta {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 16px;
-}
-
+/* --- Pills / blobs --- */
 .pill {
   border: 1px solid var(--border);
   background: var(--surface);
@@ -407,6 +373,13 @@ p {
   border-radius: 999px;
   font-weight: 650;
   font-size: 0.92rem;
+}
+
+.pill-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
 }
 
 /* --- Contact --- */
@@ -457,10 +430,6 @@ p {
 
 /* --- Responsive --- */
 @media (max-width: 920px) {
-  .hero-grid {
-    grid-template-columns: 1fr;
-  }
-
   .stats {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
